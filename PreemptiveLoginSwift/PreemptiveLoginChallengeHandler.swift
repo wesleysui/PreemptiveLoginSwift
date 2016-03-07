@@ -40,12 +40,8 @@ class PreemptiveLoginChallengeHandler: WLChallengeHandler {
         // If challenged use submitChallengeAnswer API, else use login API
         if(!self.isChallenged){
             WLAuthorizationManager.sharedInstance().login(self.securityCheck, withCredentials: ["username": username, "password": password]) { (error) -> Void in
-                NSLog("login")
                 if(error != nil){
                     NSLog("Login failed" + String(error))
-                }
-                else {
-                    NSLog("Login success")
                 }
             }
         }
@@ -60,9 +56,6 @@ class PreemptiveLoginChallengeHandler: WLChallengeHandler {
             (error) -> Void in
             if(error != nil){
                 NSLog("Logout failed" + String(error))
-            }
-            else{
-                NSLog("Logout success")
             }
         }
         self.isChallenged = false
