@@ -44,7 +44,7 @@ class LoginViewController: UIViewController {
         // Add notifications observers
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(updateLabels(_:)), name: LoginRequiredNotificationKey, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(loginSuccess), name: LoginSuccessNotificationKey, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(cleanFieldsAndLabels), name: LoginFailureNotificationKey, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(loginFailure(_:)), name: LoginFailureNotificationKey, object: nil)
     }
     
     // viewDidLoad
@@ -75,7 +75,19 @@ class LoginViewController: UIViewController {
     }
     
     // cleanFieldsAndLabels (triggered by LoginFailure notification)
-    func cleanFieldsAndLabels(){
+    func loginFailure(notification:NSNotification){
+        let userInfo = notification.userInfo as! Dictionary<String, AnyObject!>
+        let errMsg = userInfo["errorMsg"] as! String
+        
+        let alert = UIAlertController(title: "Error",
+                                      message: errMsg,
+                                      preferredStyle: .Alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+        
+        dispatch_async(dispatch_get_main_queue()) {
+            self.presentViewController(alert, animated: true, completion: nil)
+        }
+        
         self.username.text = ""
         self.password.text = ""
         self.remainingAttempts.text = ""

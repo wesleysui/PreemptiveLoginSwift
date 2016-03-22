@@ -57,8 +57,9 @@ class PreemptiveLoginChallengeHandler: WLChallengeHandler {
             if(error != nil){
                 NSLog("Logout failed" + String(error))
             }
+            self.isChallenged = false
         }
-        self.isChallenged = false
+        
     }
     
     // handleChallenge
@@ -88,29 +89,11 @@ class PreemptiveLoginChallengeHandler: WLChallengeHandler {
     // handleFailure
     override func handleFailure(failure: [NSObject : AnyObject]!) {
         self.isChallenged = false
-        if let errMsg = failure["failure"] as? String {
-            showError(errMsg)
+        if let _ = failure["failure"] as? String {
+            NSNotificationCenter.defaultCenter().postNotificationName(LoginFailureNotificationKey, object: nil, userInfo: ["errorMsg":failure["failure"]!])
         }
         else{
-            showError("Unknown error")
-        }
-        NSNotificationCenter.defaultCenter().postNotificationName(LoginFailureNotificationKey, object: nil)
-    }
-    
-    // showError
-    func showError(errorMsg: String){
-        let alert = UIAlertController(title: "Error",
-            message: errorMsg,
-            preferredStyle: .Alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
-        
-        dispatch_async(dispatch_get_main_queue()) {
-            let topController = UIApplication.sharedApplication().keyWindow!.rootViewController! as UIViewController
-            topController.presentViewController(alert,
-                animated: true,
-                completion: nil)
+            NSNotificationCenter.defaultCenter().postNotificationName(LoginFailureNotificationKey, object: nil, userInfo: ["errorMsg":"Unknown error"])
         }
     }
-
-
 }
