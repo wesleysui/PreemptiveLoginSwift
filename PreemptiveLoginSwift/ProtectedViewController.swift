@@ -29,7 +29,7 @@ class ProtectedViewController: UIViewController {
     // viewWillAppear
     override func viewWillAppear(animated: Bool) {
         // Add notifications observers
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "loginRequired:", name: LoginRequiredNotificationKey, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(loginRequired(_:)), name: LoginRequiredNotificationKey, object: nil)
     }
     
     // viewDidLoad
@@ -45,7 +45,7 @@ class ProtectedViewController: UIViewController {
     @IBAction func getBalanceClicked(sender: UIButton) {
         let url = NSURL(string: "/adapters/ResourceAdapter/balance");
         let request = WLResourceRequest(URL: url, method: WLHttpMethodGet);
-        request.sendWithCompletionHandler{ (WLResponse response, NSError error) -> Void in
+        request.sendWithCompletionHandler{ (response, error) -> Void in
             if(error != nil){
                 NSLog("Failed to get balance. error: " + String(error))
                 self.balanceLabel.text = "Failed to get balance...";

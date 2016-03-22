@@ -27,8 +27,8 @@ class PreemptiveLoginChallengeHandler: WLChallengeHandler {
         WLClient.sharedInstance().registerChallengeHandler(self)
         
         // Add notifications observers
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "login:", name: LoginNotificationKey, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "logout", name: LogoutNotificationKey, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(login(_:)), name: LoginNotificationKey, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(logout), name: LogoutNotificationKey, object: nil)
     }
     
     // login (Triggered by Login Notification)
