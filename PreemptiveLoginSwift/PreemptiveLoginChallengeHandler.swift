@@ -17,9 +17,10 @@
 import UIKit
 import IBMMobileFirstPlatformFoundation
 
-class PreemptiveLoginChallengeHandler: WLChallengeHandler {
+class PreemptiveLoginChallengeHandler: SecurityCheckChallengeHandler {
     var isChallenged: Bool
     let defaults = NSUserDefaults.standardUserDefaults()
+    let securityCheckName = "UserLogin"
     
     override init(){
         self.isChallenged = false
@@ -39,7 +40,7 @@ class PreemptiveLoginChallengeHandler: WLChallengeHandler {
         
         // If challenged use submitChallengeAnswer API, else use login API
         if(!self.isChallenged){
-            WLAuthorizationManager.sharedInstance().login(self.securityCheck, withCredentials: ["username": username, "password": password]) { (error) -> Void in
+            WLAuthorizationManager.sharedInstance().login(self.securityCheckName, withCredentials: ["username": username, "password": password]) { (error) -> Void in
                 if(error != nil){
                     NSLog("Login failed" + String(error))
                 }
@@ -52,7 +53,7 @@ class PreemptiveLoginChallengeHandler: WLChallengeHandler {
     
     // logout (Triggered by Logout Notification)
     func logout(){
-        WLAuthorizationManager.sharedInstance().logout(self.securityCheck){
+        WLAuthorizationManager.sharedInstance().logout(self.securityCheckName){
             (error) -> Void in
             if(error != nil){
                 NSLog("Logout failed" + String(error))
