@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B5798926F25D863C3CBDBC86 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CA4970276A515A421F02299 /* Pods.framework */; };
+		82922AB26B88B956EA134FF8 /* Pods_PreemptiveLoginSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD8976AD5FE514C4BB3A7F68 /* Pods_PreemptiveLoginSwift.framework */; };
 		E226E8D71C831423005A03F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E226E8D61C831423005A03F2 /* AppDelegate.swift */; };
 		E226E8DC1C831423005A03F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E226E8DA1C831423005A03F2 /* Main.storyboard */; };
 		E226E8DE1C831423005A03F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E226E8DD1C831423005A03F2 /* Assets.xcassets */; };
@@ -19,8 +19,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3BE4A2A79F01A52B0DADDCD8 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		073F0F62273588DC70A1B1B4 /* Pods-PreemptiveLoginSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PreemptiveLoginSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-PreemptiveLoginSwift/Pods-PreemptiveLoginSwift.release.xcconfig"; sourceTree = "<group>"; };
+		1042064A063FE74F9FAB599F /* Pods-PreemptiveLoginSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PreemptiveLoginSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PreemptiveLoginSwift/Pods-PreemptiveLoginSwift.debug.xcconfig"; sourceTree = "<group>"; };
 		3CA4970276A515A421F02299 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD8976AD5FE514C4BB3A7F68 /* Pods_PreemptiveLoginSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PreemptiveLoginSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E226E8D31C831422005A03F2 /* PreemptiveLoginSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PreemptiveLoginSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E226E8D61C831423005A03F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E226E8DB1C831423005A03F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -31,7 +33,6 @@
 		E226E8EE1C831A05005A03F2 /* mfpclient.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = mfpclient.plist; sourceTree = "<group>"; };
 		E226E8F01C831A94005A03F2 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E226E8F21C831B48005A03F2 /* PreemptiveLoginChallengeHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreemptiveLoginChallengeHandler.swift; sourceTree = "<group>"; };
-		E362EDD9B520FEC7AAB52967 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,7 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B5798926F25D863C3CBDBC86 /* Pods.framework in Frameworks */,
+				82922AB26B88B956EA134FF8 /* Pods_PreemptiveLoginSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,15 +51,16 @@
 			isa = PBXGroup;
 			children = (
 				3CA4970276A515A421F02299 /* Pods.framework */,
+				BD8976AD5FE514C4BB3A7F68 /* Pods_PreemptiveLoginSwift.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		939B1EA4DFFDB5CDD270AEFE /* Pods */ = {
+		E11D42C1B22725AEA851A98C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				3BE4A2A79F01A52B0DADDCD8 /* Pods.debug.xcconfig */,
-				E362EDD9B520FEC7AAB52967 /* Pods.release.xcconfig */,
+				1042064A063FE74F9FAB599F /* Pods-PreemptiveLoginSwift.debug.xcconfig */,
+				073F0F62273588DC70A1B1B4 /* Pods-PreemptiveLoginSwift.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -69,8 +71,8 @@
 				E226E8EE1C831A05005A03F2 /* mfpclient.plist */,
 				E226E8D51C831422005A03F2 /* PreemptiveLoginSwift */,
 				E226E8D41C831422005A03F2 /* Products */,
-				939B1EA4DFFDB5CDD270AEFE /* Pods */,
 				6CC67A94C0CDE050FBD24B8C /* Frameworks */,
+				E11D42C1B22725AEA851A98C /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,12 +106,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E226E8E51C831423005A03F2 /* Build configuration list for PBXNativeTarget "PreemptiveLoginSwift" */;
 			buildPhases = (
-				882F11C9F3BCA6B8AA23175E /* Check Pods Manifest.lock */,
+				020192507CA08FD6804D965E /* [CP] Check Pods Manifest.lock */,
 				E226E8CF1C831422005A03F2 /* Sources */,
 				E226E8D01C831422005A03F2 /* Frameworks */,
 				E226E8D11C831422005A03F2 /* Resources */,
-				FAF640E3C87A8E530477BCF6 /* Embed Pods Frameworks */,
-				BD30973446868F8DDFAC9184 /* Copy Pods Resources */,
+				9F61AFA0D289675CA7A7113A /* [CP] Embed Pods Frameworks */,
+				3DEF44AA396A2539168D3A1E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -128,7 +130,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0720;
-				ORGANIZATIONNAME = "Shmulik Bardosh";
+				ORGANIZATIONNAME = "";
 				TargetAttributes = {
 					E226E8D21C831422005A03F2 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -169,14 +171,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		882F11C9F3BCA6B8AA23175E /* Check Pods Manifest.lock */ = {
+		020192507CA08FD6804D965E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -184,34 +186,34 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		BD30973446868F8DDFAC9184 /* Copy Pods Resources */ = {
+		3DEF44AA396A2539168D3A1E /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PreemptiveLoginSwift/Pods-PreemptiveLoginSwift-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		FAF640E3C87A8E530477BCF6 /* Embed Pods Frameworks */ = {
+		9F61AFA0D289675CA7A7113A /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PreemptiveLoginSwift/Pods-PreemptiveLoginSwift-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -335,7 +337,7 @@
 		};
 		E226E8E61C831423005A03F2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3BE4A2A79F01A52B0DADDCD8 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 1042064A063FE74F9FAB599F /* Pods-PreemptiveLoginSwift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -352,7 +354,7 @@
 		};
 		E226E8E71C831423005A03F2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E362EDD9B520FEC7AAB52967 /* Pods.release.xcconfig */;
+			baseConfigurationReference = 073F0F62273588DC70A1B1B4 /* Pods-PreemptiveLoginSwift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";

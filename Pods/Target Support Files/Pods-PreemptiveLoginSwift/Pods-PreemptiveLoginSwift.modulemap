@@ -1,0 +1,6 @@
+framework module Pods_PreemptiveLoginSwift {
+  umbrella header "Pods-PreemptiveLoginSwift-umbrella.h"
+
+  export *
+  module * { export * }
+}
